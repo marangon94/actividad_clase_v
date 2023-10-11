@@ -1,0 +1,76 @@
+### Obtencion de todos los productos
+GET http://localhost:1234/productos/
+
+### (Ejercicio 1) Obtencion de todos los usuarios
+GET http://localhost:1234/usuarios/
+
+### Obtención de un producto específico
+GET http://localhost:1234/productos/7/
+
+### (Ejercicio 2) Obtención de un usuario específico por id
+GET http://localhost:1234/usuarios/7/
+
+
+### Agregado de un producto nuevo, el body lleva el json con el objeto
+POST http://localhost:1234/productos
+Content-Type: application/json
+
+{
+    "id_producto": 11,
+    "nombre": "Mixer multiuso ACME",
+    "tipo": "Electrodoméstico de cocina",
+    "precio": 150.15
+}
+
+### (Ejercicio 3) Agregado de un usuario nuevo, el body lleva el json con el objeto
+POST http://localhost:1234/usuarios
+Content-Type: application/json
+
+{
+    "id_usuario": 11,
+    "dni": 12321232,
+    "nombre": "Pablo",
+    "apellido":"Laveglia",
+    "email": "plaveglia@ejemplo.com",
+    "telefono": "1154983287"
+}
+
+
+### Actualización de un producto, el body lleva solo el atributo a modificar
+
+PATCH http://localhost:1234/productos/10
+Content-Type: application/json
+
+{
+    "precio": 2000
+}
+
+### (Ejercicio 4) Actualización de un usuario, el body lleva solo el atributo a modificar
+
+PATCH http://localhost:1234/usuarios/7
+Content-Type: application/json
+
+{
+    "telefono": "42237078"
+}
+
+### Borrado de un producto
+DELETE http://localhost:1234/productos/11
+
+### (Ejercicio 5) Borrado de un usuario
+DELETE http://localhost:1234/usuarios/11
+
+### (Ejercicio 6) Obtención del precio de un producto por id
+GET http://localhost:1234/productos/precio/2
+
+### (Ejercicio 7) Obtención del nombre de un producto por id
+GET http://localhost:1234/productos/nombre/2
+
+### (Ejercicio 8) Obtención del teléfono de un usuario por id
+GET http://localhost:1234/usuarios/telefono/7
+
+### (Ejercicio 9) Obtención del nombre de un usuario por id
+GET http://localhost:1234/usuarios/nombre/7
+
+### (Ejercicio 10) Suma de precio de productos
+GET http://localhost:1234/productos/totalstock

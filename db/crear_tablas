@@ -1,0 +1,61 @@
+/*Creacion de tablas*/
+
+CREATE TABLE productos (
+id_producto SERIAL PRIMARY KEY,
+nombre VARCHAR (100),
+tipo VARCHAR (100),
+precio FLOAT
+);
+
+CREATE TABLE usuarios (
+id_usuario SERIAL PRIMARY KEY,
+dni INTEGER,
+nombre VARCHAR (100),
+apellido VARCHAR (100),
+email VARCHAR (100),
+telefono VARCHAR (100)
+);
+
+/*Carga de datos*/
+
+Insert into productos
+Values(1,'Lavadora','Electrodomestico',499.99);
+Insert into productos
+Values(2,'Refrigerador','Electrodomestico',699.99);
+Insert into productos
+Values(3,'Horno de microondas','Electrodomestico',129.99);
+Insert into productos
+Values(4,'Licuadora','Electrodomestico',49.99);
+Insert into productos
+Values(5,'Televisor LED','Electrodomestico',799.99);
+Insert into productos
+Values(6,'Cafetera','Electrodomestico',89.99);
+Insert into productos
+Values(7,'Aspiradora','Electrodomestico',149.99);
+Insert into productos
+Values(8,'Batidora','Electrodomestico',59.99);
+Insert into productos
+Values(9,'Lavaplatos','Electrodomestico',399.99);
+Insert into productos
+Values(10,'Secadora de ropa','Electrodomestico',349.99);
+
+Insert into usuarios
+Values(1,11111111,'Juan','Perez','juanperez@ejemplo.com','42551053');
+Insert into usuarios
+Values(2,22222222,'Maria','Rodriguez','mariarodriguez@ejemplo.com','44237078');
+Insert into usuarios
+Values(3,33333333,'Pedro','Saborido','pedrosaborido@ejemplo.com','42582483');
+Insert into usuarios
+Values(4,44444444,'Luciano','Garritano','lgarritano@ejemplo.com','1157901463');
+Insert into usuarios
+Values(5,55555555,'Ana','Paola','apaola@ejemplo.com','1167907771');
+Insert into usuarios
+Values(6,66666666,'Constanza','Sierra','csierra@ejemplo.com','1198352463');
+Insert into usuarios
+Values(7,77777777,'German','Marangon','gmarangon@ejemplo.com','1168426895');
+Insert into usuarios
+Values(8,88888888,'Silvina','Rivera','srivera@ejemplo.com','1156784523');
+Insert into usuarios
+Values(9,99999999,'Florencia','Notario','fnotario@ejemplo.com','1166449988');
+Insert into usuarios
+Values(10,10101010,'Eduardo','Radici','eradici@ejemplo.com','1122334455');
